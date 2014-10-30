@@ -1,5 +1,4 @@
 //::LICENSE:://
-;(function () {
 var factory = function(signals){
 
 //::HASHER:://
@@ -10,10 +9,8 @@ var factory = function(signals){
 if (typeof define === 'function' && define.amd) {
     define(['signals'], factory);
 } else if (typeof exports === 'object') {
-    module.exports = factory(require('signals'));
+    module.exports = factory;
 } else {
     /*jshint sub:true */
     window['hasher'] = factory(window['signals']);
 }
-
-}());
